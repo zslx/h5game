@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- <html manifest="/static/g/appcache.mf"> -->
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>品牌雨</title>
+  </head>
+  
+  <body style="margin:0px;padding:0px">
+	<div id="wrap"></div>
+	
+	<div id="dialog" style="position:fixed;padding:10px;width:auto;height:auto;left:20%;top:40%;background-color:white;display:none">
+	  <div style="text-align:center">游戏结束</div><hr>
+	  <div id="content"></div>
+	  <hr>
+	  <div style="text-align:center">
+	  <button id="okbtn">再玩一局</button>
+	  <button id="xbtn">退出</button>
+	  </div>
+	</div>
+	
+	<audio id="bk2m" autoplay loop>
+	  <source src="res/bk2.wav" type="audio/x-wav">
+	  <source src="res/bk2.mp3" type="audio/mpeg">
+	  <source src="res/bk2.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<audio id="crowdohh">
+	  <source src="res/crowdohh.mp3" type="audio/mpeg">
+	  <source src="res/crowdohh.wav" type="audio/x-wav">
+	  <!-- <source src="res/crowdohh.ogg" type="audio/ogg"> -->
+	</audio>
+	<audio id="hithard">
+	  <source src="res/hithard.mp3" type="audio/mpeg">
+	  <source src="res/hithard.wav" type="audio/x-wav">
+	  <!-- <source src="res/hithard.ogg" type="audio/ogg"> -->
+	</audio>
+	
+	<!-- <script src="e/vGame.js?v=8" type="text/javascript"></script> -->
+	
+	<script src="e/10core.js" type="text/javascript"></script>
+	<script src="e/11tool.js?v=1" type="text/javascript"></script>
+	<script src="e/12movableObj.js?v=1" type="text/javascript"></script>
+	<script src="e/13shape.js?v=1" type="text/javascript"></script>
+	<script src="e/14objList.js?v=1" type="text/javascript"></script>
+	<script src="e/15sprite.js?v=1" type="text/javascript"></script>
+	<script src="e/16animation.js?v=1" type="text/javascript"></script>
+	<script src="e/17input.js?v=2" type="text/javascript"></script>
+	<script src="e/18collision.js?v=1" type="text/javascript"></script>
+	<script src="e/30dot.js?v=1" type="text/javascript"></script>
+	<script src="e/56game.js?v=6" type="text/javascript"></script>
+	<!-- <script src="e/99study.js?v=" type="text/javascript"></script> -->
+	
+	<script src="js/vball.js?v=L" type="text/javascript"></script>
+  </body>
+  
+</html>

@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# 2014-10-20 10:35:08 V1.0.3
+# cache file list
+# 缓存清单可以使用相对路径或绝对URL地址
+CACHE:
+# 包含 manifest 属性的网页必定会被缓存
+e/vGame.js?v=2
+js/vball.js?v=3
+
+# /static/h5f/res/css/shake.min.css
+# ../../res/css/yaohuang.css
+
+# 始终从网络获取
+NETWORK:
+
+# 出错时的代替页面指定
+FALLBACK:
