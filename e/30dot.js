@@ -28,9 +28,9 @@ vge.register('vge',function(g){
 
 			context.fillStyle= 'rgba('+[this.color.r,this.color.g,this.color.b,scale].join(',') +')';
 
-			context.fill()
+			context.fill();
 			context.restore();
-		},
+		}
 	});
 
 	var Particle=g.class(function(dr){
@@ -76,7 +76,7 @@ vge.register('vge',function(g){
 				}
 			}
 
-			console.log(dots.length)
+			console.log(dots.length);
 			return dots;
 		},
 
@@ -91,14 +91,14 @@ vge.register('vge',function(g){
 
 	}).methods({
 
-		init:function(text,context,width,height){
-			context.clearRect(0,0,width,height)
+		init:function(str,context,width,height){
+			context.clearRect(0,0,width,height);
 			var grd = context.createRadialGradient(200,90,30, 60, 40, 380);
 			grd.addColorStop(0.6, "yellow");
 			grd.addColorStop(0.3, "green");
 			grd.addColorStop(0, "red");
 			grd.addColorStop(1, "blue");
-			var text=new vge.shape.Text(text, {pos:[0,0],textBaseline:'top',textAlign:'left',style:grd});
+			var text=new vge.shape.Text(str, {pos:[0,0],textBaseline:'top',textAlign:'left',style:grd});
 			text.setOptions({font:"120px 微软雅黑"});
 			text.draw();
 
@@ -172,8 +172,7 @@ vge.register('vge',function(g){
 				console.log('stoped');
 			}
 
-		},
-
+		}
 	});
 
 	this.Dot=Dot;

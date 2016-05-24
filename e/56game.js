@@ -178,9 +178,10 @@ vge.register('vge.game',function(g){
                 currentFpsArr.push(1000/duration); //计算实际平均fps
                 if(currentFpsArr.length>=20){
                     var sumFps=0;
-                    var fps;
-                    while(fps=currentFpsArr.pop()){
+                    var fps=currentFpsArr.pop();
+                    while(fps){
                         sumFps+=fps;
+                        fps=currentFpsArr.pop();
                     }
                     self.avgFPS=Math.round(sumFps/20);
                 }
@@ -210,8 +211,10 @@ vge.register('vge.game',function(g){
                 }
             }
             self.lastTime = now;
-            // timerid = window.setTimeout(arguments.callee, delay);
+            
+            timerid = window.setTimeout(arguments.callee, delay);
             // timerid = window.setTimeout(self.loop, delay);
+            
         };
     };
 
@@ -275,12 +278,14 @@ vge.register('vge.game',function(g){
                 this.lastTime = now;
                 this.loopDuration = 0;
 
-                // // window.setTimeout(loop.call(this), delay);
+                window.setTimeout(loop.call(this), delay);
+                
 				// this.loop = loop.call(this);
                 // window.setTimeout(this.loop, delay);
 
-				this.loop = rafloop.call(this);
-				this.raf = new vge.RAF(this.loop,delay);
+				// this.loop = rafloop.call(this);
+				// this.raf = new vge.RAF(this.loop,delay);
+                
             }
         },
         run: function() {
